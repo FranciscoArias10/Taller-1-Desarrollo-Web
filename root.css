@@ -1,0 +1,22 @@
+:root {
+    --color-primary: #2563eb;
+    --color-bg: #ffffff;
+    --color-bg-alt: #f3f4f6;
+    --color-text: #1f2937;
+    --color-dark: #111827;
+    --font-main: sans-serif;
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --spacing-xl: 6rem;
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --transition-fast: 0.2s ease-in-out;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
