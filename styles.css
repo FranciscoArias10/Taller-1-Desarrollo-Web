@@ -1,11 +1,10 @@
 :root {
-    --color-primary: #2563eb;
-    --color-primary-hover: #1d4ed8;
-    --color-secondary: #ffffff;
-    --color-text-main: #1f2937;
-    --color-text-muted: #4b5563;
-    --color-bg-light: #f3f4f6;
-    --color-bg-dark: #111827;
+    --c-1: #2563eb;    /* Color 1: Azul principal */
+    --c-2: #ffffff;    /* Color 2: Blanco */
+    --c-3: #111827;    /* Color 3: Oscuro */
+    --c-4: #f3f4f6;    /* Color 4: Gris claro */
+    --c-5: #4b5563;    /* Color 5: Gris oscuro */
+    
     --font-main: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
@@ -25,9 +24,9 @@
 
 body {
     font-family: var(--font-main);
-    color: var(--color-text-main);
+    color: var(--c-3);
     line-height: 1.6;
-    background-color: var(--color-secondary);
+    background-color: var(--c-2);
 }
 
 a {
@@ -56,7 +55,7 @@ img {
     text-align: center;
     font-size: 2rem;
     margin-bottom: var(--spacing-md);
-    color: var(--color-bg-dark);
+    color: var(--c-3);
 }
 
 .btn {
@@ -65,35 +64,34 @@ img {
     border-radius: var(--radius-sm);
     font-weight: 600;
     text-align: center;
-    transition: background-color var(--transition-fast), color var(--transition-fast);
+    transition: all var(--transition-fast);
     cursor: pointer;
 }
 
 .btn-primary {
-    background-color: var(--color-primary);
-    color: var(--color-secondary);
-    border: 2px solid var(--color-primary);
+    background-color: var(--c-1);
+    color: var(--c-2);
+    border: 2px solid var(--c-1);
 }
 
 .btn-primary:hover {
-    background-color: var(--color-primary-hover);
-    border-color: var(--color-primary-hover);
+    filter: brightness(0.85);
 }
 
 .btn-secondary {
     background-color: transparent;
-    color: var(--color-secondary);
-    border: 2px solid var(--color-secondary);
+    color: var(--c-2);
+    border: 2px solid var(--c-2);
 }
 
 .btn-secondary:hover {
-    background-color: var(--color-secondary);
-    color: var(--color-primary);
+    background-color: var(--c-2);
+    color: var(--c-1);
 }
 
 .header {
-    background-color: var(--color-secondary);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: var(--c-2);
+    border-bottom: 1px solid var(--c-4);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -111,7 +109,7 @@ img {
 .logo {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--color-primary);
+    color: var(--c-1);
 }
 
 .nav {
@@ -133,24 +131,24 @@ img {
 }
 
 .nav-link:hover {
-    color: var(--color-primary);
+    color: var(--c-1);
 }
 
 .nav-btn {
-    background-color: var(--color-primary);
-    color: var(--color-secondary);
+    background-color: var(--c-1);
+    color: var(--c-2);
     padding: 0.5rem 1rem;
     border-radius: var(--radius-sm);
+    transition: filter var(--transition-fast);
 }
 
 .nav-btn:hover {
-    background-color: var(--color-primary-hover);
-    color: var(--color-secondary);
+    filter: brightness(0.85);
 }
 
 .hero {
-    background-color: var(--color-bg-dark);
-    color: var(--color-secondary);
+    background-color: var(--c-3);
+    color: var(--c-2);
     padding: var(--spacing-xl) 0;
     text-align: center;
 }
@@ -169,12 +167,12 @@ img {
 
 .hero-subtitle {
     font-size: 1.125rem;
-    color: #e5e7eb;
+    color: var(--c-4);
     max-width: 600px;
 }
 
 .services {
-    background-color: var(--color-bg-light);
+    background-color: var(--c-4);
 }
 
 .services-grid {
@@ -184,10 +182,10 @@ img {
 }
 
 .card {
-    background-color: var(--color-secondary);
+    background-color: var(--c-2);
     padding: var(--spacing-md);
     border-radius: var(--radius-md);
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border: 1px solid var(--c-4);
     display: flex;
     flex-direction: column;
     gap: var(--spacing-xs);
@@ -195,11 +193,11 @@ img {
 
 .card-title {
     font-size: 1.25rem;
-    color: var(--color-primary);
+    color: var(--c-1);
 }
 
 .card-text {
-    color: var(--color-text-muted);
+    color: var(--c-5);
 }
 
 .about-content {
@@ -220,7 +218,7 @@ img {
 
 .about-list {
     list-style-position: inside;
-    color: var(--color-text-muted);
+    color: var(--c-5);
     display: flex;
     flex-direction: column;
     gap: var(--spacing-xs);
@@ -238,8 +236,8 @@ img {
 }
 
 .cta {
-    background-color: var(--color-primary);
-    color: var(--color-secondary);
+    background-color: var(--c-1);
+    color: var(--c-2);
     text-align: center;
 }
 
@@ -268,8 +266,8 @@ img {
 }
 
 .footer {
-    background-color: var(--color-bg-dark);
-    color: #9ca3af;
+    background-color: var(--c-3);
+    color: var(--c-4);
     padding: var(--spacing-md) 0 var(--spacing-sm);
 }
 
@@ -285,7 +283,7 @@ img {
     display: block;
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--color-secondary);
+    color: var(--c-2);
     margin-bottom: var(--spacing-xs);
 }
 
@@ -296,13 +294,13 @@ img {
 }
 
 .footer-links a:hover {
-    color: var(--color-secondary);
+    color: var(--c-2);
 }
 
 .footer-bottom {
     text-align: center;
     padding-top: var(--spacing-sm);
-    border-top: 1px solid #374151;
+    border-top: 1px solid var(--c-5);
     font-size: 0.875rem;
 }
 
